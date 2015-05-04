@@ -1,5 +1,5 @@
 title = ABP Test Pages
 
 <section class="abp-container">
-  <? include testpages ?>
+  <? include testcases ?>
 </section>
