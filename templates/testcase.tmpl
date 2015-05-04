@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+	<link rel="stylesheet" href="/css/testpages.css">
+  </head>
+  <body>
+  
+    <? include header ?>
+	
+	<section class="abp-container abp-breadcrumb">
+	  <a href="/">Home</a>
+	  > <a href="/en/testcases/">Test cases</a>
+      {{ breadcrumb|safe }}
+	</section>
+	
+	<section class="abp-container">
+	  <h2>Test case - {{ testcaseid }}</h2>
+      {{ body|safe }}
+	</section>
+	
+	<? include footer ?>
+	
+  </body>
+</html>

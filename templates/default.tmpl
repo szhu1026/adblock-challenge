@@ -1,5 +1,16 @@
+<!DOCTYPE html>
 <html>
-<body>
-{{body|safe}}
-</body>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/testpages.css"/>
+  </head>
+  <body>
+  
+    <? include header ?>
+	
+    {{ body|safe }}
+	
+	<? include footer ?>
+	
+  </body>
 </html>
