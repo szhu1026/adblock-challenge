@@ -1,5 +1,5 @@
-<h2>Test cases</h2>
-<p>These pages are small test cases helpful for testing ABP behaviour and functionality.</p>
+<h2>Other individual test cases</h2>
+<p>Other small test cases helpful for testing specific ABP behaviour and functionality such as hiding placeholder images.</p>
 <ul class="abp-pagelist">
   <h3>Image tag &lt;img&gt;</h3>
   <li><a href="testcases/img/01">IMG-01 - Image with single src</a></li>

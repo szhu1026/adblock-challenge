@@ -8,15 +8,40 @@
 
     <? include header ?>
 
-	<section class="abp-container abp-breadcrumb">
+	<section class="abp-container abp-breadcrumbs">
 	  <a href="/">Home</a>
 	  > <a href="testsuite">Test suite</a>
       {{ breadcrumb|safe }}
 	</section>
 
 	<section class="abp-container">
-	  <h2>Test suite - {{ testsuiteid }}</h2>
-      {{ body|safe }}
+	  <h2>{{ testsuiteid }} - {{ testsuitename }}</h2>
+    
+    {{ body|safe }}
+    
+    <h3>Instructions</h3>
+    <table class="abp-testcase-information">
+    <tr>
+      <th>Pass if</th>
+      <td>{{ testsuitepassif }}</td>
+    </tr>
+    <tr>
+      <th>Fail if</th>
+      <td>{{ testsuitefailif }}</td>
+    </tr>
+    </table>
+
+    <h3>Information</h3>
+    <table class="abp-testcase-information">
+    <tr>
+      <th>Purpose</th>
+      <td>{{ testsuitepurpose }}</td>
+    </tr>
+    <tr>
+      <th>Test method</th>
+      <td>{{ testsuitetestmethod }}</td>
+    </tr>
+    </table>
 	</section>
 
 	<? include footer ?>
