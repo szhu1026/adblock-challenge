@@ -9,5 +9,5 @@ title = ABP Test Pages
 <? include testcases ?>
 </section>
 <section class="abp-container">
-<? include references ?>
+<!-- include references -->
 </section>
