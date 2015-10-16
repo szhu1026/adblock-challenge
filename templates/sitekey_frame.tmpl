@@ -1,0 +1,10 @@
+{% extends "frame.tmpl" %}
+
+{% block body %}
+<script type="text/javascript">
+  function frame_url(parent_location)
+  {
+    return parent_location.hash.substring(1);
+  }
+</script>
+{% endblock %}

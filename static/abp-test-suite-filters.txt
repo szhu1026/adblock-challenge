@@ -8,3 +8,6 @@ testcase-fail.png?specific$domain=www.testpages.adblockplus.org
 www.testpages.adblockplus.org###abp-testsuite-tohide-specific
 ~testcase-exception.adblockplus.org###abp-testsuite-tohide-exceptiononly
 testcase-pass.png?exceptiononly$domain=~testcase-exception.adblockplus.org
+
+! Exception for the $sitekey served from /sitekey-frame
+@@$sitekey=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANGtTstne7e8MbmDHDiMFkGbcuBgXmiVesGOG3gtYeM1EkrzVhBjGUvKXYE4GLFwqty3v5MuWWbvItUWBTYoVVsCAwEAAQ

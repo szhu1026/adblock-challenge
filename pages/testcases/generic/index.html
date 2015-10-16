@@ -1,29 +1,12 @@
 title=ABP Test Pages
-template=blank
-
-<head>
-  <style>
-     html, body { margin: 0; height: 100%; }
-     #iframe { display: block; width: 100%; height: 100%; border: none; }
-  </style>
-</head>
-
-<iframe id="iframe"></iframe>
+template=frame
 
 <script type="text/javascript">
-  var iframe = document.getElementById("iframe")
-  function update_iframe_location()
+  function frame_url(parent_location)
   {
-    var hash = window.location.hash;
-    if (hash)
-    {
-      var url = window.location.href.
-        substr(0, window.location.href.length - hash.length).
-        replace("://testpages", "://www.testpages") + hash.substring(1);
-
-      iframe.src = url;
-    }
+    var href = parent_location.href;
+    var hash = parent_location.hash;
+    return href.substr(0, href.length - hash.length).
+      replace("://testpages", "://www.testpages") + hash.substring(1);
   }
-  window.addEventListener("hashchange", update_iframe_location);
-  update_iframe_location();
 </script>
