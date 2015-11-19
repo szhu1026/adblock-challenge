@@ -4,7 +4,7 @@
 <script type="text/javascript">
   function frame_url(parent_location)
   {
-    return parent_location.hash.substring(1);
+    return parent_location.origin + parent_location.hash.substring(1);
   }
 </script>
 {% endblock %}
