@@ -1,0 +1,30 @@
+title = $script Exception - ABP Test Pages
+template = testcase
+
+{% set testcase_moreinfo = [
+  ("Filter Options", "https://adblockplus.org/filters#options"),
+] %}
+
+<section class="site-panel">
+  <h2>$script Exception</h2>
+  <p>Check that usage of the $script filter option in an exception filter works as expected.</p>
+</section>
+
+<section class="site-panel">
+  <h2>Test case</h2>
+  <div class="testcase-container">
+    <div class="testcase-row">
+      <h3>Image</h3>
+      <img class="testcase-image" src="/testcasefiles/scriptexception/image.jpg"/>
+    </div>
+    <div class="testcase-row">
+      <h3>Script</h3>
+      <div id="testcase-scripttarget">Script target</div>
+    </div>
+  </div>
+  <h3>Filters</h3>
+  ||testpages.adblockplus.org/testcasefiles/scriptexception/*<br>
+  @@testpages.adblockplus.org/testcasefiles/scriptexception/$script
+</section>
+
+<script src="/testcasefiles/scriptexception/script.js"></script>

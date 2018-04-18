@@ -1,0 +1,25 @@
+title = $elemhide Exception - ABP Test Pages
+template = testcase
+
+{% set testcase_moreinfo = [
+  ("Filter Options", "https://adblockplus.org/filters#options"),
+] %}
+
+<section class="site-panel">
+  <h2>$elemhide Exception</h2>
+  <p>Check that usage of the $elemhide filter option works as expected.</p>
+</section>
+
+<section class="site-panel">
+  <h2>Test case</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-green testcase-ex-elemhide">Target</div>
+    <div class="testcase-contentaside stripes-green testcase-ex-elemhide">Target</div>
+    <img class="testcase-contentaside" src="/testcasefiles/elemhide/image.jpg">
+      <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##.testcase-ex-elemhide<br>
+  ||testpages.adblockplus.org/testcasefiles/elemhide/image.jpg<br>
+  @@testpages.adblockplus.org/en/exceptions/elemhide^$elemhide<br>
+</section>

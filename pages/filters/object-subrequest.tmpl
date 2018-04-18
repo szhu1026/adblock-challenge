@@ -1,0 +1,25 @@
+title = $object-subrequest - ABP Test Pages
+template = testcase
+
+{% set testcase_moreinfo = [
+  ("Filter Options", "https://adblockplus.org/filters#options"),
+] %}
+
+<section class="site-panel">
+  <h2>$object-subrequest</h2>
+  <p>Check that usage of the $object-subrequest filter option works as expected.</p>
+</section>
+
+<section class="site-panel">
+  <h2>Test case</h2>
+  <div class="testcase-container">
+    <div class="testcase-row">
+      <h3>Object Subrequest</h3><object data="/testcasefiles/objectsubrequest/objectsubrequest.swf" type="application/x-shockwave-flash" style="width: 250px; height: 250px;"></object>
+    </div>
+    <div class="testcase-row">
+      <h3>Image</h3><img class="testcase-image" src="/testcasefiles/objectsubrequest/image.jpg"/>
+    </div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org/testcasefiles/objectsubrequest/$object-subrequest
+</section>

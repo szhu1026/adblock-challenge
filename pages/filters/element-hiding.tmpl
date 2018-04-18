@@ -1,0 +1,126 @@
+title = Element Hiding - ABP Test Pages
+template = testcase
+
+{% set testcase_moreinfo = [
+  ("Filter Cheatsheet - Element Hiding", "https://adblockplus.org/filter-cheatsheet#elementhiding"),
+] %}
+
+<section class="site-panel">
+  <h2>Element Hiding</h2>
+  <p>Check that basic element hiding functionality is working as expected.</p>
+</section>
+
+<section class="site-panel">
+  <h2>ID Selector</h2>
+  <div class="testcase-container">
+    <div id="testcase-eh-id" class="testcase-contentaside stripes-red">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org###testcase-eh-id
+</section>
+
+<section class="site-panel">
+  <h2>Class Selector</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red testcase-eh-class">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##.testcase-eh-class
+</section>
+
+<section class="site-panel">
+  <h2>Descendant Selector</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red testcase-eh-descendant">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##.testcase-container > .testcase-eh-descendant
+</section>
+
+<section class="site-panel">
+  <h2>Sibling Selector</h2>
+  <div class="testcase-container">
+    <div class="testcase-eh-sibling"></div>
+    <div class="testcase-contentaside stripes-red testcase-eh-sibling-target">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##.testcase-eh-sibling + .testcase-eh-sibling-target
+</section>
+
+<section class="site-panel">
+  <h2>Attribute Selector 1</h2>
+  <div class="testcase-container">
+    <table height="100" width="100" class="testcase-contentaside stripes-red testcase-eh">
+      <tr><td>Target</td></tr>
+    </table>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##table[height="100"][width="100"]
+</section>
+
+<section class="site-panel">
+  <h2>Attribute Selector 2</h2>
+  <div class="testcase-container">
+    <a href="http://testcase-attribute.com/" class="testcase-contentaside stripes-red">Target</a>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##a[href="http://testcase-attribute.com/"]
+</section>
+
+
+<section class="site-panel">
+  <h2>Attribute Selector 3</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red" style="width:199px;height:51px;">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##div[style="width:199px;height:51px;"]
+</section>
+
+<section class="site-panel">
+  <h2>Starts with Selector 1</h2>
+  <div class="testcase-container">
+    <a href="http://testcase-attributestartswith.com/test" class="testcase-contentaside stripes-red">Target</a>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##a[href^="http://testcase-attributestartswith.com/"]
+</section>
+
+
+<section class="site-panel">
+  <h2>Starts with Selector 2</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red" style="width:201px;height:51px; color: white;">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##div[style^="width:201px;height:51px;"]
+</section>
+
+<section class="site-panel">
+  <h2>Ends with Selector</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red" style="color:white;width:202px;height:51px;">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##div[style$="width:202px;height:51px;"]
+</section>
+
+<section class="site-panel">
+  <h2>Contains Selector</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red" style="width:203px;height:51px;color:white;">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##div[style*="width:203px;height:51px;"]
+</section>

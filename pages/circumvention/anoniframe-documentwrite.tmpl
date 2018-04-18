@@ -1,0 +1,37 @@
+title = Anonymous Frame document.write() - Circumvention - ABP Test Pages
+template = testcase
+
+<script>
+setTimeout(function()
+{
+  var iframe = document.getElementById("append");
+  var span = document.createElement("span");
+  span.className = "testcase-circ-anoniframe-docwrite";
+  span.textContent = "This text should be hidden";
+  iframe.contentDocument.body.appendChild(span);
+  var doc = document.getElementById("write").contentDocument;
+  doc.open();
+  doc.write("<span class='testcase-circ-anoniframe-docwrite'>This text should be hidden</span>");
+  doc.close();
+}, 0);
+</script>
+
+<section class="site-panel">
+
+  <h2>Test case</h2>
+  <div class="testcase-container">
+    <p>
+      Top frame: [<span class="testcase-circ-anoniframe-docwrite">This text should be hidden</span>]
+    </p>
+
+    <p>
+      Subframe (Element.appendChild): [<iframe id="append"></iframe>]
+    </p>
+
+    <p>
+      Subframe (document.write): [<iframe id="write"></iframe>]
+    </p>
+  </div>
+  <h3>Related links</h3>
+  <p><a href="https://issues.adblockplus.org/ticket/3185">Issue #3185</a></p>
+</section>

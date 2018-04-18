@@ -1,0 +1,37 @@
+title = $popup - ABP Test Pages
+template = testcase
+
+{% set testcase_moreinfo = [
+  ("Filter Options", "https://adblockplus.org/filters#options"),
+] %}
+
+
+<script>
+function do_popup()
+{
+   window.open("/en/popuptarget")
+}
+</script>
+
+<section class="site-panel">
+  <h2>$popup</h2>
+  <p>Check that usage of the $popup filter option is working as expected.</p>
+</section>
+
+<section class="site-panel">
+  <h2>Link-based popup</h2>
+  <div class="testcase-container">
+    <a href="/en/popuptarget" target="_blank">Link popup</a><br><br>
+  </div>
+  <h3>Filters</h3>
+  ||testpages.adblockplus.org/en/popuptarget^$popup
+</section>
+
+<section class="site-panel">
+  <h2>Script-based popup</h2>
+  <div class="testcase-container">
+    <button onclick="do_popup();">window.open() popup</button>
+  </div>
+  <h3>Filters</h3>
+  ||testpages.adblockplus.org/en/popuptarget^$popup
+</section>

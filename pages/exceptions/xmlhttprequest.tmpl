@@ -1,0 +1,58 @@
+title = $xmlhttprequest Exception - ABP Test Pages
+template = testcase
+
+{% set testcase_moreinfo = [
+  ("Filter Options", "https://adblockplus.org/filters#options"),
+] %}
+
+<script>
+function pagelog(message) {
+  var log = document.getElementById("testcase-ex-xmlhttprequest");
+  log.innerText = log.innerText + message + "\n";
+  console.log(message);
+}
+
+function aborted(evt) {
+  pagelog("XMLHTTPRequest was aborted.");
+}
+
+function failed(evt) {
+  pagelog("XMLHTTPRequest failed.");
+}
+
+function makerequest() {
+  var req = new XMLHttpRequest();
+  req.addEventListener("error", failed);
+  req.addEventListener("abort", aborted);
+  req.open("GET", "http://testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/text.txt", true);
+  req.onload = function(e) {
+    if (this.status == 200) {
+      pagelog(this.responseText);
+       }
+    };
+  req.send();
+}
+
+document.addEventListener('DOMContentLoaded', makerequest, false);
+</script>
+
+<section class="site-panel">
+  <h2>$xmlhttprequest Exception</h2>
+  <p>Check that usage of the $xmlhttprequest filter option in an exception filter works as expected.</p>
+</section>
+
+<section class="site-panel">
+  <h2>Test case</h2>
+  <p>The XMLHTTPRequest should not be blocked. The Image should be blocked.</p>
+  <div class="testcase-container">
+    <div class="testcase-row">
+      <h3>XMLHTTPRequest</h3><div id="testcase-ex-xmlhttprequest"></div>
+    </div>
+    <div class="testcase-row">
+      <h3>Image</h3><img class="testcase-image" src="/testcasefiles/xmlhttprequestexception/image.jpg"/>
+    </div>
+  </div>
+  <h3>Filters</h3>
+  ||testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/*<br>
+  @@testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/$xmlhttprequest
+</section>

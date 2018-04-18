@@ -1,0 +1,105 @@
+title = Element Hiding Emulation / Extended Selectors - ABP Test Pages
+template = testcase
+
+{% set testcase_moreinfo = [
+  ("Filter Cheatsheet - Extended Selectors", "https://adblockplus.org/filter-cheatsheet#elementhideemulation"),
+] %}
+
+<section class="site-panel">
+  <h2>Element Hiding Emulation / Extended Selectors </h2>
+  <p>Check that element hiding emulation functionality is working as expected.</p>
+</section>
+
+<section class="site-panel">
+  <h2>Basic :-abp-properties() usage</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red testcase-es-prop">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org#?#div:-abp-properties(width: 213px)
+</section>
+
+<section class="site-panel">
+  <h2>Basic :-abp-has() usage</h2>
+  <div class="testcase-container">
+   <div class="testcase-contentaside stripes-red">
+     Target
+     <div>
+       <img class="testcase-es-has">
+     </div>
+    </div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org#?#div:-abp-has(>div>img.testcase-es-has)
+</section>
+
+
+<section class="site-panel">
+  <h2>Basic :-abp-contains() usage</h2>
+  <div class="testcase-container">
+   <span class="testcase-contentaside stripes-red">ESContainsTarget</span>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org#?#span:-abp-contains(ESContainsTarget)
+</section>
+
+<section class="site-panel">
+  <h2>Chained extended selectors</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red">
+      <div class="testcase-es-chained">Target</div>
+    </div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org#?#div:-abp-has(> div:-abp-properties(width: 214px))
+</section>
+
+
+<section class="site-panel">
+  <h2>Case insensative extended selectors</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red testcase-es-prop">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org#?#div:-abp-properties(WiDtH: 215px)
+</section>
+
+<section class="site-panel">
+  <h2>Wildcard in extended selector</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red testcase-es-wildcard">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org#?#div:-abp-properties(cursor:*)
+</section>
+
+<section class="site-panel">
+  <h2>Regular expression in :-abp-properties()</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red testcase-es-regex-1">Target</div>
+    <div class="testcase-contentaside stripes-red testcase-es-regex-2">Target</div>
+    <div class="testcase-contentaside stripes-green testcase-es-regex-3">Not a Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org#?#div:-abp-properties(/width: 12[1-5]px;/)
+</section>
+
+
+<section class="site-panel">
+  <h2>Regular expression in :-abp-contains()</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-red">ESContainsRegEx1</div>
+    <div class="testcase-contentaside stripes-red">ESContainsRegEx2</div>
+    <div class="testcase-contentaside stripes-red">ESContainsRegEx3</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org#?#div > div :-abp-contains(/Target/)
+</section>

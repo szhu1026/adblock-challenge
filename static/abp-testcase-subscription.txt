@@ -1,0 +1,97 @@
+[Adblock Plus 2.0]
+
+! filters/blocking
+||testpages.adblockplus.org/testcasefiles/blocking/addresscomplete/image.jpg
+/testcasefiles/blocking/addresspart/abptestcasepath/
+||testpages.adblockplus.org/testcasefiles/blocking/wildcard/*/image.jpg
+
+! filters/element-hiding
+testpages.adblockplus.org###testcase-eh-id
+testpages.adblockplus.org##.testcase-eh-class
+testpages.adblockplus.org##.testcase-container > .testcase-eh-descendant
+testpages.adblockplus.org##.testcase-eh-sibling + .testcase-eh-sibling-target
+testpages.adblockplus.org##table[height="100"][width="100"]
+testpages.adblockplus.org##a[href="http://testcase-attribute.com/"]
+testpages.adblockplus.org##div[style="width:199px;height:51px;"]
+testpages.adblockplus.org##a[href^="http://testcase-attributestartswith.com/"]
+testpages.adblockplus.org##div[style^="width:201px;height:51px;"]
+testpages.adblockplus.org##div[style$="width:202px;height:51px;"]
+testpages.adblockplus.org##div[style*="width:203px;height:51px;"]
+
+! filters/extended-selectors
+testpages.adblockplus.org#?#div:-abp-properties(width: 213px)
+testpages.adblockplus.org#?#div:-abp-has(>div>img.testcase-es-has)
+testpages.adblockplus.org#?#span:-abp-contains(ESContainsTarget)
+testpages.adblockplus.org#?#div:-abp-has(> div:-abp-properties(width: 214px))
+testpages.adblockplus.org#?#div:-abp-properties(WiDtH: 215px)
+testpages.adblockplus.org#?#div:-abp-properties(cursor:*)
+testpages.adblockplus.org#?#div:-abp-properties(/width: 12[1-5]px;/)
+testpages.adblockplus.org#?#div > div:-abp-contains(/ESContainsRegEx[1-2]/)
+
+! filters/popup
+||testpages.adblockplus.org/en/popuptarget^$popup
+! filters/image
+testpages.adblockplus.org/testcasefiles/image/$image
+! filters/script
+testpages.adblockplus.org/testcasefiles/script/$script
+! filters/stylesheet
+testpages.adblockplus.org/testcasefiles/stylesheet/$stylesheet
+! filters/subdocument
+testpages.adblockplus.org/testcasefiles/subdocument/$subdocument
+! filters/object
+testpages.adblockplus.org/testcasefiles/object/$object
+! filters/objectsubrequest
+testpages.adblockplus.org/testcasefiles/objectsubrequest/$object-subrequest
+! filters/xmlhttprequest
+testpages.adblockplus.org/testcasefiles/xmlhttprequest/$xmlhttprequest
+! filters/ping
+testpages.adblockplus.org/*^$ping
+! filters/websocket
+$websocket,domain=testpages.adblockplus.org
+! filters/webrtc
+$webrtc,domain=testpages.adblockplus.org
+
+
+! exceptions/elemhide
+testpages.adblockplus.org##.testcase-ex-elemhide
+||testpages.adblockplus.org/testcasefiles/elemhide/image.jpg
+@@testpages.adblockplus.org/en/exceptions/elemhide^$elemhide
+! exceptions/document
+testpages.adblockplus.org##.testcase-ex-document
+||testpages.adblockplus.org/testcasefiles/document/*
+@@testpages.adblockplus.org/en/exceptions/document^$document
+! exceptions/popup
+||testpages.adblockplus.org/en/exceptions/popup^$popup
+@@||testpages.adblockplus.org/en/exceptions/popup^$popup
+! exceptions/image
+||testpages.adblockplus.org/testcasefiles/imageexception/*
+@@testpages.adblockplus.org/testcasefiles/imageexception/$image
+! exceptions/script
+||testpages.adblockplus.org/testcasefiles/scriptexception/*
+@@testpages.adblockplus.org/testcasefiles/scriptexception/$script
+! exceptions/stylesheet
+||testpages.adblockplus.org/testcasefiles/stylesheetexception/*
+@@testpages.adblockplus.org/testcasefiles/stylesheetexception/$stylesheet
+! exceptions/subdocument
+||testpages.adblockplus.org/testcasefiles/subdocumentexception/*
+@@testpages.adblockplus.org/testcasefiles/subdocumentexception/$subdocument
+! exceptions/xmlhttprequest
+||testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/*
+@@testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/$xmlhttprequest
+! exceptions/element-hiding
+testpages.adblockplus.org##.testcase-ehe
+testpages.adblockplus.org#@#.testcase-ehe
+
+! Generic hide and generic block
+@@testpages.adblockplus.org/*/testcases/generic$generichide,genericblock
+testcase-fail.png?specific$domain=www.testpages.adblockplus.org
+www.testpages.adblockplus.org###abp-testsuite-tohide-specific
+~testcase-exception.adblockplus.org###abp-testsuite-tohide-exceptiononly
+testcase-pass.png?exceptiononly$domain=~testcase-exception.adblockplus.org
+
+! Exception for the $sitekey served from /sitekey-frame
+@@$sitekey=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANGtTstne7e8MbmDHDiMFkGbcuBgXmiVesGOG3gtYeM1EkrzVhBjGUvKXYE4GLFwqty3v5MuWWbvItUWBTYoVVsCAwEAAQ
+
+! Circumvention
+testpages.adblockplus.org##.testcase-circ-is
+testpages.adblockplus.org##.testcase-circ-anoniframe-docwrite

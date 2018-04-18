@@ -1,0 +1,101 @@
+title = $webrtc - ABP Test Pages
+template = testcase
+
+{% set testcase_moreinfo = [
+  ("Filter Options", "https://adblockplus.org/filters#options"),
+] %}
+
+
+<script>
+
+// Borrowed from https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample
+
+function pagelog(message) {
+  var log = document.getElementById("testcase-fo-webrtc");
+  log.innerText = log.innerText + message + "\n";
+  console.log(message);
+}
+
+function handleReceiveMessage(event) {
+  pagelog(event.data);
+}
+
+function handleLocalAddCandidateSuccess() {
+  pagelog("handleLocalAddCandidateSuccess()")
+}
+ 
+function handleRemoteAddCandidateSuccess() {
+  pagelog("handleRemoteAddCandidateSuccess()")
+}
+
+function handleReceiveChannelStatusChange(event) {
+  if (receiveChannel) {
+    pagelog("Receive channel's status has changed to " + receiveChannel.readyState);
+  }
+}
+
+function handleSendChannelStatusChange(event) {
+  if (sendChannel) {
+    var state = sendChannel.readyState;
+    
+    if (state === "open") {
+      pagelog("handleSendChannelStatusChange() open")
+      sendChannel.send("Test Message");
+    } else {
+      pagelog("handleSendChannelStatusChange() not open")
+    }
+  }
+}
+
+function receiveChannelCallback(event) {
+  receiveChannel = event.channel;
+  receiveChannel.onmessage = handleReceiveMessage;
+  receiveChannel.onopen = handleReceiveChannelStatusChange;
+  receiveChannel.onclose = handleReceiveChannelStatusChange;
+}
+
+function do_connect() {
+  localConnection = new RTCPeerConnection();
+
+  sendChannel = localConnection.createDataChannel("sendChannel");
+  sendChannel.onopen = handleSendChannelStatusChange;
+  sendChannel.onclose = handleSendChannelStatusChange;
+
+  remoteConnection = new RTCPeerConnection();
+  remoteConnection.ondatachannel = receiveChannelCallback;
+
+  localConnection.onicecandidate = e => !e.candidate
+        || remoteConnection.addIceCandidate(e.candidate)
+        .catch(handleAddCandidateError);
+
+    remoteConnection.onicecandidate = e => !e.candidate
+        || localConnection.addIceCandidate(e.candidate)
+        .catch(handleAddCandidateError);
+
+  localConnection.createOffer()
+    .then(offer => localConnection.setLocalDescription(offer))
+    .then(() => remoteConnection.setRemoteDescription(localConnection.localDescription))
+    .then(() => remoteConnection.createAnswer())
+    .then(answer => remoteConnection.setLocalDescription(answer))
+    .then(() => localConnection.setRemoteDescription(remoteConnection.localDescription))
+    .catch(handleCreateDescriptionError);
+}
+
+document.addEventListener('DOMContentLoaded', do_connect, false);
+</script>
+
+<section class="site-panel">
+  <h2>$webrtc</h2>
+  <p>Check that usage of the $webrtc filter option works as expected.</p>
+</section>
+
+<section class="site-panel">
+  <h2>Test case</h2>
+  <div class="testcase-container">
+    <div class="testcase-row">
+      <h3>WebRTC Request</h3><div id="testcase-fo-webrtc"></div>
+    </div>
+  </div>
+  <h3>Filters</h3>
+  $webrtc,domain=testpages.adblockplus.org
+</section>

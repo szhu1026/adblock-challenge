@@ -1,29 +1,150 @@
-<h2>Other individual test cases</h2>
-<p>Other small test cases helpful for testing specific ABP behaviour and functionality such as hiding placeholder images.</p>
-<ul class="abp-pagelist">
-  <h3>Image tag &lt;img&gt;</h3>
-  <li><a href="testcases/img/01">IMG-01 - Image with single src</a></li>
-  <li><a href="testcases/img/02">IMG-02 - Image with protocol independent src</a></li>
-  <li><a href="testcases/img/03">IMG-03 - Image with srcset</a></li>
-  <li><a href="testcases/img/04">IMG-04 - Image covered by overlay elements</a></li>
-  <li><a href="testcases/img/05">IMG-05 - Image via iframe</a></li>
-</ul>
-<ul class="abp-pagelist">
-  <h3>Embed tag &lt;embed&gt;</h3>
-  <li><a href="testcases/embed/01">EMBED-01 - Image as SVG</a></li>
-</ul>
-<ul class="abp-pagelist">
-  <h3>CSS</h3>
-  <li><a href="testcases/css/01">CSS-01 - Image via background-image</a></li>
-  <li><a href="testcases/css/02">CSS-02 - Image via background-image and base64</a></li>
-  <li><a href="testcases/css/03">CSS-03 - Image via content</a></li>
-</ul>
-<ul class="abp-pagelist">
-  <h3>Generic hide/block</h3>
-  <li><a href="testcases/generic/#01">GENERIC-01 - Generic block</a></li>
-  <li><a href="testcases/generic/#02">GENERIC-02 - Generic hide</a></li>
-  <li><a href="testcases/generic/#03">GENERIC-03 - Specific block</a></li>
-  <li><a href="testcases/generic/#04">GENERIC-04 - Specific hide</a></li>
-  <li><a href="testcases/generic/#05">GENERIC-05 - Generic exception block</a></li>
-  <li><a href="testcases/generic/#06">GENERIC-06 - Specific exception hide</a></li>
-</ul>
+<section class="site-panel">
+  <h2>Testpages Filter Subscription</h2>
+  <p>This subscription includes all of the filters required to verify the following test cases.</p><br>
+  <a class="site-button" href="/abp-testcase-subscription.txt" target="_blank">View</a>
+  <a class="site-button" href="abp:subscribe?location=http%3A%2F%2Ftestpages.adblockplus.org%2Fabp-testcase-subscription.txt&amp;title=ABP%20Testcase%20Subscription"">Subscribe</a>
+</section>
+
+<section class="site-panel">
+  <h2>Filter test cases</h2>
+  <h3>Blocking and hiding filters</h3>
+  <ul class="site-pagelist">
+    <li>
+      <a href="filters/blocking">
+        <h3>Blocking</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/element-hiding">
+        <h3>Element Hiding</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/element-hiding-emulation">
+        <h3>Element Hiding Emulation / Extended Selectors</h3>
+      </a>
+    </li>
+  </ul>
+  <h3>Filter options</h3>
+  <ul class="site-pagelist">
+    <li>
+      <a href="filters/popup">
+        <h3>$popup</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/image">
+        <h3>$image</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/script">
+        <h3>$script</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/stylesheet">
+        <h3>$stylesheet</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/subdocument">
+        <h3>$subdocument</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/object">
+        <h3>$object</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/object-subrequest">
+        <h3>$object-subrequest - Not working yet</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/xmlhttprequest">
+        <h3>$xmlhttprequest</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/ping">
+        <h3>$ping</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/websocket">
+        <h3>$websocket</h3>
+      </a>
+    </li>
+    <li>
+      <a href="filters/webrtc">
+        <h3>$webrtc - Not working yet</h3>
+      </a>
+    </li>
+    </ul>
+    <h3>Exception Filters</h3>
+    <ul class="site-pagelist">
+    <li>
+      <a href="exceptions/elemhide">
+        <h3>$elemhide - Exception</h3>
+      </a>
+    </li>
+    <li>
+      <a href="exceptions/document">
+        <h3>$document - Exception</h3>
+      </a>
+    </li>
+    <li>
+      <a href="exceptions/popup">
+        <h3>$popup - Exception</h3>
+      </a>
+    </li>
+    <li>
+      <a href="exceptions/image">
+        <h3>$image - Exception</h3>
+      </a>
+    </li>
+    <li>
+      <a href="exceptions/script">
+        <h3>$script - Exception</h3>
+      </a>
+    </li>
+    <li>
+      <a href="exceptions/stylesheet">
+        <h3>$stylesheet - Exception</h3>
+      </a>
+    </li>
+    <li>
+      <a href="exceptions/subdocument">
+        <h3>$subdocument - Exception</h3>
+      </a>
+    </li>
+    <li>
+      <a href="exceptions/xmlhttprequest">
+        <h3>$xmlhttprequest - Exception</h3>
+      </a>
+    </li>
+    <li>
+      <a href="exceptions/element-hiding">
+        <h3>Element Hiding - Exception</h3>
+      </a>
+    </li>
+    </ul>
+</section>
+
+<section class="site-panel">
+  <h2>Circumvention</h2>
+  <ul class="site-pagelist">
+    <li>
+      <a href="circumvention/inline-style-important">
+        <h3>Inline style !important</h3>
+      </a>
+    </li>
+    <li>
+      <a href="circumvention/anoniframe-documentwrite">
+        <h3>Anonymous iframe document.write()</h3>
+      </a>
+    </li>
+  </ul>
+</section>

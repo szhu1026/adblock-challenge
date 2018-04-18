@@ -1,0 +1,19 @@
+title = Element Hiding - Exception - ABP Test Pages
+template = testcase
+testcase_title = Element Hiding - Exception
+testcase_intro = Check if element hiding exception functionality is working as expected.
+
+{% set testcase_moreinfo = [
+  ("Exception Rules", "https://adblockplus.org/filters#elemhide_exceptions"),
+] %}
+
+<section class="site-panel">
+  <h2>Test case</h2>
+  <div class="testcase-container">
+    <div class="testcase-contentaside stripes-green testcase-ehe">Target</div>
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##.testcase-ehe<br>
+  testpages.adblockplus.org#@#.testcase-ehe
+</section>

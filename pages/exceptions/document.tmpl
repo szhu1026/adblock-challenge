@@ -1,0 +1,25 @@
+title = $document Exception - ABP Test Pages
+template = testcase
+
+{% set testcase_moreinfo = [
+  ("Filter Options", "https://adblockplus.org/filters#options"),
+] %}
+
+<section class="site-panel">
+  <h2>$document Exception</h2>
+  <p>Check that usage of the $document filter option works as expected.</p>
+</section>
+
+<section class="site-panel">
+  <h2>Test case</h2>
+  <div class="testcase-container">
+   <div class="testcase-contentaside stripes-green testcase-ex-document">Target</div>
+   <div class="testcase-contentaside stripes-green testcase-ex-document">Target</div>
+   <img class="testcase-contentaside stripes-green" src="/testcasefiles/document/image.jpg">
+    <div class="testcase-content stripes-grey">Content</div>
+  </div>
+  <h3>Filters</h3>
+  testpages.adblockplus.org##.testcase-ex-document<br>
+  ||testpages.adblockplus.org/testcasefiles/document/*<br>
+  @@testpages.adblockplus.org/en/exceptions/document^$document<br>
+</section>
