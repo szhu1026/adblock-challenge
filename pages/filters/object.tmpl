@@ -1,4 +1,4 @@
-title = $object - ABP Test Pages
+title = $object
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -8,6 +8,7 @@ template = testcase
 <section class="site-panel">
   <h2>$object</h2>
   <p>Check that usage of the $object filter option works as expected.</p>
+  <p>With the filter displayed below each test case added to ABP (or with the testcase subscription installed and active), the object/swf file in the test case panel should be blocked but the image should not.</p>
 </section>
 
 <section class="site-panel">
@@ -18,9 +19,10 @@ template = testcase
       <h3>Object</h3><object data="/testcasefiles/object/object.swf" type="application/x-shockwave-flash" style="width: 250px; height: 250px;"></object>
     </div>
     <div class="testcase-row">
-      <h3>Image</h3><img class="testcase-image" src="/testcasefiles/object/image.jpg"/>
+      <h3>Image</h3>
+      <img class="testcase-image" src="/testcasefiles/object/image.jpg"/>
     </div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org/testcasefiles/object/$object
+  <pre>testpages.adblockplus.org/testcasefiles/object/$object</pre>
 </section>

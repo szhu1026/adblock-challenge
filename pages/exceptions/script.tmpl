@@ -1,4 +1,4 @@
-title = $script Exception - ABP Test Pages
+title = $script Exception
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -8,6 +8,7 @@ template = testcase
 <section class="site-panel">
   <h2>$script Exception</h2>
   <p>Check that usage of the $script filter option in an exception filter works as expected.</p>
+  <p>With the filter(s) displayed below each test case added to ABP (or with the testcase subscription installed and active), the image should be blocked while the script should not be blocked.</p>
 </section>
 
 <section class="site-panel">
@@ -23,8 +24,8 @@ template = testcase
     </div>
   </div>
   <h3>Filters</h3>
-  ||testpages.adblockplus.org/testcasefiles/scriptexception/*<br>
-  @@testpages.adblockplus.org/testcasefiles/scriptexception/$script
+  <pre>||testpages.adblockplus.org/testcasefiles/scriptexception/*</pre>
+  <pre>@@testpages.adblockplus.org/testcasefiles/scriptexception/$script</pre>
 </section>
 
 <script src="/testcasefiles/scriptexception/script.js"></script>

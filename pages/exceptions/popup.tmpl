@@ -1,4 +1,4 @@
-title = $popup Exception - ABP Test Pages
+title = $popup Exception
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -15,6 +15,7 @@ function do_popup()
 <section class="site-panel">
   <h2>$popup Exception</h2>
   <p>Check that usage of the $popup filter option in an exception filter works as expected.</p>
+  <p>With the filter(s) displayed below each test case added to ABP (or with the testcase subscription installed and active), the popup should not be blocked and open succesfully.</p>
 </section>
 
 <section class="site-panel">
@@ -23,8 +24,8 @@ function do_popup()
     <a href="/en/exceptions/popup" target="_blank">Link popup</a><br><br>
   </div>
   <h3>Filters</h3>
-  ||testpages.adblockplus.org/en/exceptions/popup^$popup<br>
-  @@||testpages.adblockplus.org/en/exceptions/popup^$popup
+  <pre>||testpages.adblockplus.org/en/exceptions/popup^$popup</pre>
+  <pre>@@||testpages.adblockplus.org/en/exceptions/popup^$popup</pre>
 </section>
 
 <section class="site-panel">

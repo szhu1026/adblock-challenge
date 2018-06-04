@@ -1,4 +1,4 @@
-title = Element Hiding - ABP Test Pages
+title = Element Hiding
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -8,6 +8,7 @@ template = testcase
 <section class="site-panel">
   <h2>Element Hiding</h2>
   <p>Check that basic element hiding functionality is working as expected.</p>
+  <p>With the filter displayed below each test case added to ABP (or with the testcase subscription installed and active), the red target elements in each test case panel should be hidden.</p>
 </section>
 
 <section class="site-panel">
@@ -17,7 +18,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org###testcase-eh-id
+  <pre>testpages.adblockplus.org###testcase-eh-id</pre>
 </section>
 
 <section class="site-panel">
@@ -27,7 +28,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org##.testcase-eh-class
+  <pre>testpages.adblockplus.org##.testcase-eh-class</pre>
 </section>
 
 <section class="site-panel">
@@ -37,7 +38,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org##.testcase-container > .testcase-eh-descendant
+  <pre>testpages.adblockplus.org##.testcase-container > .testcase-eh-descendant</pre>
 </section>
 
 <section class="site-panel">
@@ -48,7 +49,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org##.testcase-eh-sibling + .testcase-eh-sibling-target
+  <pre>testpages.adblockplus.org##.testcase-eh-sibling + .testcase-eh-sibling-target</pre>
 </section>
 
 <section class="site-panel">
@@ -60,7 +61,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org##table[height="100"][width="100"]
+  <pre>testpages.adblockplus.org##table[height="100"][width="100"]</pre>
 </section>
 
 <section class="site-panel">
@@ -70,7 +71,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org##a[href="http://testcase-attribute.com/"]
+  <pre>testpages.adblockplus.org##a[href="http://testcase-attribute.com/"]</pre>
 </section>
 
 
@@ -81,7 +82,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org##div[style="width:199px;height:51px;"]
+  <pre>testpages.adblockplus.org##div[style="width:199px;height:51px;"]</pre>
 </section>
 
 <section class="site-panel">
@@ -91,7 +92,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org##a[href^="http://testcase-attributestartswith.com/"]
+  <pre>testpages.adblockplus.org##a[href^="http://testcase-attributestartswith.com/"]</pre>
 </section>
 
 
@@ -102,7 +103,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org##div[style^="width:201px;height:51px;"]
+  <pre>testpages.adblockplus.org##div[style^="width:201px;height:51px;"]</pre>
 </section>
 
 <section class="site-panel">
@@ -112,7 +113,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org##div[style$="width:202px;height:51px;"]
+  <pre>testpages.adblockplus.org##div[style$="width:202px;height:51px;"]</pre>
 </section>
 
 <section class="site-panel">
@@ -122,5 +123,5 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org##div[style*="width:203px;height:51px;"]
+  <pre>testpages.adblockplus.org##div[style*="width:203px;height:51px;"]</pre>
 </section>

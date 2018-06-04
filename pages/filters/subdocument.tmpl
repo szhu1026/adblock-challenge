@@ -1,4 +1,4 @@
-title = $subdocument - ABP Test Pages
+title = $subdocument
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -8,6 +8,7 @@ template = testcase
 <section class="site-panel">
   <h2>$subdocument</h2>
   <p>Check that usage of the $subdocument filter option works as expected.</p>
+  <p>With the filter displayed below each test case added to ABP (or with the testcase subscription installed and active), the subdocuments/frames in each test case panel should be blocked but the images should not.</p>
 </section>
 
 <section class="site-panel">
@@ -21,5 +22,5 @@ template = testcase
     </div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org/testcasefiles/subdocument/$subdocument
+  <pre>testpages.adblockplus.org/testcasefiles/subdocument/$subdocument</pre>
 </section>

@@ -1,4 +1,4 @@
-title = $script - ABP Test Pages
+title = $script
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -9,6 +9,7 @@ template = testcase
 <section class="site-panel">
   <h2>$script</h2>
   <p>Check that usage of the $script filter option works as expected.</p>
+  <p>With the filter displayed below each test case added to ABP (or with the testcase subscription installed and active), the scripts in each test case panel should be blocked but the images should not.</p>
 </section>
 
 <section class="site-panel">
@@ -19,11 +20,11 @@ template = testcase
       <h3>Script</h3><div id="testcase-scripttarget"></div>
     </div>
     <div class="testcase-row">
-   	  <h3>Image</h3><img class="testcase-image" src="/testcasefiles/script/image.jpg"/>
+      <h3>Image</h3><img class="testcase-image" src="/testcasefiles/script/image.jpg"/>
     </div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org/testcasefiles/script/$script
+  <pre>testpages.adblockplus.org/testcasefiles/script/$script</pre>
 </section>
 
 <script src="/testcasefiles/script/script.js"></script>

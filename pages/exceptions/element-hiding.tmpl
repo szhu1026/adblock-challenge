@@ -1,4 +1,4 @@
-title = Element Hiding - Exception - ABP Test Pages
+title = Element Hiding - Exception
 template = testcase
 testcase_title = Element Hiding - Exception
 testcase_intro = Check if element hiding exception functionality is working as expected.
@@ -8,12 +8,18 @@ testcase_intro = Check if element hiding exception functionality is working as e
 ] %}
 
 <section class="site-panel">
+  <h2>Element Hiding Exception</h2>
+  <p>Check that usage of the of element hiding exceptions work as expected.</p>
+  <p>With the filter(s) displayed below each test case added to ABP (or with the testcase subscription installed and active), the green element in the test case panel should not be hidden.</p>
+</section>
+
+<section class="site-panel">
   <h2>Test case</h2>
   <div class="testcase-container">
     <div class="testcase-contentaside stripes-green testcase-ehe">Target</div>
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org##.testcase-ehe<br>
-  testpages.adblockplus.org#@#.testcase-ehe
+  <pre>testpages.adblockplus.org##.testcase-ehe</pre>
+  <pre>testpages.adblockplus.org#@#.testcase-ehe</pre>
 </section>

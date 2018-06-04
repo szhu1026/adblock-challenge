@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ title }}</title>
-	<link rel="stylesheet" href="/css/testpages.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} - ABP Test Pages</title>
+    <link rel="stylesheet" href="/css/testpages.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/abp-32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <? include header ?>
     <div class="site-container">
       
       <section class="site-panel site-breadcrumbs">
-	      <a href="/" target="_top">Home</a>
-	      > <a href="testcases" target="_top">Test cases</a>
+        <a href="/" target="_top">Home</a>
+        > <a href="testcases" target="_top">Test cases</a>
         {{ breadcrumb|safe }}
-	    </section>
+      </section>
 
       {{ body|safe }}
 
@@ -36,12 +37,11 @@
           {% endfor %}
         </ul>
         {% endif %}
-	  </section>
-	  {% endif %}
-
+      </section>
+      {% endif %}
 
       {% if testcase_filters %}
-	  <section class="site-panel">
+      <section class="site-panel">
         <h2>Example filters</h2>
         <p>Example filters that can be used when testing this page.</p>
         {% for filter in testcase_filters %}
@@ -49,41 +49,33 @@
           <p class="filter">{{filter[0]}}</p>
           <p class="description">{{filter[1]}}</p>
         </div>
-        {%endfor  %}
-	  </section>
-	  {% endif %}
+        {% endfor %}
+      </section>
+      {% endif %}
 
-	  {% if testcase_passnotes %}
+      {% if testcase_passnotes %}
       <section class="site-panel">
         <h2>Pass</h2>
         {% for note in testcase_passnotes %}
         <p>{{ note }}</p>
         {% endfor %}
-	  </section>
-	  {% endif %}
+      </section>
+      {% endif %}
 
-	  {% if testcase_moreinfo %}
-	  <section class="site-panel">
+      {% if testcase_moreinfo %}
+      <section class="site-panel">
         <h2>More information</h2>
         <ul>
         {% for link in testcase_moreinfo %}
           <li><a href="{{link[1]}}">{{link[0]}}</a></li>
-        {%endfor  %}
+        {% endfor %}
         </ul>
-	  </section>
-	  {% endif %}
-
-      
-	 
-
+    </section>
+    {% endif %}
 
     </div>
 
-	
-
-	
-
-	<? include footer ?>
+  <? include footer ?>
 
   </body>
 </html>

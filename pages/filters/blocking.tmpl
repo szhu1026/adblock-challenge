@@ -1,4 +1,4 @@
-title = Blocking - ABP Test Pages
+title = Blocking
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -8,6 +8,7 @@ template = testcase
 <section class="site-panel">
   <h2>Blocking</h2>
   <p>Check that basic blocking functionality is working as expected.</p>
+  <p>With the filter displayed below each test case added to ABP (or with the testcase subscription installed and active), the test images in each test case panel should be blocked.</p>
 </section>
 
 <section class="site-panel">
@@ -17,7 +18,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  ||testpages.adblockplus.org/testcasefiles/blocking/addresscomplete/image.jpg
+  <pre>||testpages.adblockplus.org/testcasefiles/blocking/addresscomplete/image.jpg</pre>
 </section>
 
 <section class="site-panel">
@@ -27,7 +28,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  /testcasefiles/blocking/addresspart/abptestcasepath/
+  <pre>/testcasefiles/blocking/addresspart/abptestcasepath/</pre>
 </section>
 
 <section class="site-panel">
@@ -38,5 +39,5 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  ||testpages.adblockplus.org/testcasefiles/blocking/wildcard/*/image.jpg
+  <pre>||testpages.adblockplus.org/testcasefiles/blocking/wildcard/*/image.jpg</pre>
 </section>

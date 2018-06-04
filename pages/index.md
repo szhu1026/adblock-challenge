@@ -6,6 +6,6 @@ title = ABP Test Pages
   <h2>Welcome</h2>
   <p>This site provides test pages for Adblock Plus functionality.</p>
 </section>
-<? include testcases ?> 
+<? include testcases ?>
 
 </div> <!-- .site-container -->

@@ -1,4 +1,4 @@
-title = $websocket - ABP Test Pages
+title = $websocket
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', ws_connect, false);
 <section class="site-panel">
   <h2>$websocket</h2>
   <p>Check that usage of the $websocket filter option works as expected.</p>
+  <p>With the filter displayed below each test case added to ABP (or with the testcase subscription installed and active), the websocket connection should be blocked and not echo back the test message.</p>
 </section>
 
 <section class="site-panel">
@@ -56,5 +57,5 @@ document.addEventListener('DOMContentLoaded', ws_connect, false);
    <div class="testcase-row"><h3>WebSocket Request</h3><div id="testcase-fo-websocket"></div></div>
   </div>
   <h3>Filters</h3>
-  $websocket,domain=testpages.adblockplus.org
+  <pre>$websocket,domain=testpages.adblockplus.org</pre>
 </section>

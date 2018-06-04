@@ -1,4 +1,4 @@
-title = $image Exception - ABP Test Pages
+title = $image Exception
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -10,6 +10,7 @@ template = testcase
 <section class="site-panel">
   <h2>$image Exception</h2>
   <p>Check that usage of the $image filter option in an exception filter works as expected.</p>
+  <p>With the filter(s) displayed below each test case added to ABP (or with the testcase subscription installed and active), the image should not be blocked while the stylesheet should be.</p>
 </section>
 
 <section class="site-panel">
@@ -24,6 +25,6 @@ template = testcase
     </div>
   </div>
   <h3>Filters</h3>
-  ||testpages.adblockplus.org/testcasefiles/imageexception/*<br>
-  @@testpages.adblockplus.org/testcasefiles/imageexception/$image
+  <pre>||testpages.adblockplus.org/testcasefiles/imageexception/*</pre>
+  <pre>@@testpages.adblockplus.org/testcasefiles/imageexception/$image</pre>
 </section>

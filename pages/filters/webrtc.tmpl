@@ -1,4 +1,4 @@
-title = $webrtc - ABP Test Pages
+title = $webrtc
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -23,7 +23,7 @@ function handleReceiveMessage(event) {
 function handleLocalAddCandidateSuccess() {
   pagelog("handleLocalAddCandidateSuccess()")
 }
- 
+
 function handleRemoteAddCandidateSuccess() {
   pagelog("handleRemoteAddCandidateSuccess()")
 }
@@ -37,7 +37,7 @@ function handleReceiveChannelStatusChange(event) {
 function handleSendChannelStatusChange(event) {
   if (sendChannel) {
     var state = sendChannel.readyState;
-    
+
     if (state === "open") {
       pagelog("handleSendChannelStatusChange() open")
       sendChannel.send("Test Message");
@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', do_connect, false);
 <section class="site-panel">
   <h2>$webrtc</h2>
   <p>Check that usage of the $webrtc filter option works as expected.</p>
+  <p>With the filter displayed below each test case added to ABP (or with the testcase subscription installed and active), the WebRTC connection should be blocked.</p>
+  <p>Note: This test does not work correctly yet.</p>
 </section>
 
 <section class="site-panel">
@@ -97,5 +99,5 @@ document.addEventListener('DOMContentLoaded', do_connect, false);
     </div>
   </div>
   <h3>Filters</h3>
-  $webrtc,domain=testpages.adblockplus.org
+  <pre>$webrtc,domain=testpages.adblockplus.org</pre>
 </section>

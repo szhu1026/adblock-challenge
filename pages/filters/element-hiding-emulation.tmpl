@@ -1,4 +1,4 @@
-title = Element Hiding Emulation / Extended Selectors - ABP Test Pages
+title = Element Hiding Emulation / Extended Selectors
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -8,6 +8,7 @@ template = testcase
 <section class="site-panel">
   <h2>Element Hiding Emulation / Extended Selectors </h2>
   <p>Check that element hiding emulation functionality is working as expected.</p>
+  <p>With the filter displayed below each test case added to ABP (or with the testcase subscription installed and active), the red target elements in each test case panel should be hidden while any green elements should not be hidden.</p>
 </section>
 
 <section class="site-panel">
@@ -17,7 +18,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org#?#div:-abp-properties(width: 213px)
+  <pre>testpages.adblockplus.org#?#div:-abp-properties(width: 213px)</pre>
 </section>
 
 <section class="site-panel">
@@ -32,7 +33,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org#?#div:-abp-has(>div>img.testcase-es-has)
+  <pre>testpages.adblockplus.org#?#div:-abp-has(>div>img.testcase-es-has)</pre>
 </section>
 
 
@@ -43,7 +44,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org#?#span:-abp-contains(ESContainsTarget)
+  <pre>testpages.adblockplus.org#?#span:-abp-contains(ESContainsTarget)</pre>
 </section>
 
 <section class="site-panel">
@@ -55,7 +56,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org#?#div:-abp-has(> div:-abp-properties(width: 214px))
+  <pre>testpages.adblockplus.org#?#div:-abp-has(> div:-abp-properties(width: 214px))</pre>
 </section>
 
 
@@ -66,7 +67,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org#?#div:-abp-properties(WiDtH: 215px)
+  <pre>testpages.adblockplus.org#?#div:-abp-properties(WiDtH: 215px)</pre>
 </section>
 
 <section class="site-panel">
@@ -76,7 +77,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org#?#div:-abp-properties(cursor:*)
+  <pre>testpages.adblockplus.org#?#div:-abp-properties(cursor:*)</pre>
 </section>
 
 <section class="site-panel">
@@ -88,7 +89,7 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org#?#div:-abp-properties(/width: 12[1-5]px;/)
+  <pre>testpages.adblockplus.org#?#div:-abp-properties(/width: 12[1-5]px;/)</pre>
 </section>
 
 
@@ -101,5 +102,5 @@ template = testcase
     <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org#?#div > div :-abp-contains(/Target/)
+  <pre>testpages.adblockplus.org#?#div > div :-abp-contains(/Target/)</pre>
 </section>

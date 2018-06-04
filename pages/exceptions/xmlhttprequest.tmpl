@@ -1,5 +1,4 @@
-title = $xmlhttprequest Exception - ABP Test Pages
-template = testcase
+title = $xmlhttprequest Exception
 
 {% set testcase_moreinfo = [
   ("Filter Options", "https://adblockplus.org/filters#options"),
@@ -39,6 +38,7 @@ document.addEventListener('DOMContentLoaded', makerequest, false);
 <section class="site-panel">
   <h2>$xmlhttprequest Exception</h2>
   <p>Check that usage of the $xmlhttprequest filter option in an exception filter works as expected.</p>
+  <p>With the filter(s) displayed below each test case added to ABP (or with the testcase subscription installed and active), the XMLHTTPRequest should not be blocked while the image should be.</p>
 </section>
 
 <section class="site-panel">
@@ -53,6 +53,6 @@ document.addEventListener('DOMContentLoaded', makerequest, false);
     </div>
   </div>
   <h3>Filters</h3>
-  ||testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/*<br>
-  @@testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/$xmlhttprequest
+  <pre>||testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/*</pre>
+  <pre>@@testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/$xmlhttprequest</pre>
 </section>

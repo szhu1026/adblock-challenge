@@ -1,4 +1,4 @@
-title = $popup - ABP Test Pages
+title = $popup
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -16,6 +16,7 @@ function do_popup()
 <section class="site-panel">
   <h2>$popup</h2>
   <p>Check that usage of the $popup filter option is working as expected.</p>
+  <p>With the filter displayed below each test case added to ABP (or with the testcase subscription installed and active), the popups triggered by the link/buttons below should be blocked/closed.</p>
 </section>
 
 <section class="site-panel">
@@ -24,7 +25,7 @@ function do_popup()
     <a href="/en/popuptarget" target="_blank">Link popup</a><br><br>
   </div>
   <h3>Filters</h3>
-  ||testpages.adblockplus.org/en/popuptarget^$popup
+  <pre>||testpages.adblockplus.org/en/popuptarget^$popup</pre>
 </section>
 
 <section class="site-panel">
@@ -33,5 +34,5 @@ function do_popup()
     <button onclick="do_popup();">window.open() popup</button>
   </div>
   <h3>Filters</h3>
-  ||testpages.adblockplus.org/en/popuptarget^$popup
+  <pre>||testpages.adblockplus.org/en/popuptarget^$popup</pre>
 </section>

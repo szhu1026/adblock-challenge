@@ -81,6 +81,11 @@ h3 { font-size: 1.1rem; }
   background-image: repeating-linear-gradient(45deg, #f00, #f00 10px, #c00 10px, #c00 20px);
 }
 
+.stripes-blue {
+  border: 2px solid #0079cc;
+  background-image: repeating-linear-gradient(45deg, #2231b5, #2231b5, 10px, #0079cc 10px, #0079cc 20px);;
+}
+
 
 /* Site Layout/Panels */
 
@@ -214,6 +219,10 @@ h3 { font-size: 1.1rem; }
   border: 0px solid #ababab;
 
   margin-top: .5rem;
+}
+
+#testcase-scripttarget {
+  padding: .5rem;
 }
 
 .testcase-filter .filter {

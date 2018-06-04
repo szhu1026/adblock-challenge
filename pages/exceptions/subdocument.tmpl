@@ -1,4 +1,4 @@
-title = $subdocument Exception - ABP Test Pages
+title = $subdocument Exception
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -10,6 +10,7 @@ template = testcase
 <section class="site-panel">
   <h2>$subdocument Exception</h2>
   <p>Check that usage of the $subdocument filter option in an exception filter works as expected.</p>
+  <p>With the filter(s) displayed below each test case added to ABP (or with the testcase subscription installed and active), the subdocument/frame should not be blocked while the stylesheet should be.</p>
 </section>
 
 <section class="site-panel">
@@ -25,6 +26,6 @@ template = testcase
     </div>
   </div>
   <h3>Filters</h3>
-  ||testpages.adblockplus.org/testcasefiles/subdocumentexception/*<br>
-  @@testpages.adblockplus.org/testcasefiles/subdocumentexception/$subdocument
+  <pre>||testpages.adblockplus.org/testcasefiles/subdocumentexception/*</pre>
+  <pre>@@testpages.adblockplus.org/testcasefiles/subdocumentexception/$subdocument</pre>
 </section>

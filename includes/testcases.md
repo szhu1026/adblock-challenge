@@ -1,6 +1,7 @@
 <section class="site-panel">
   <h2>Testpages Filter Subscription</h2>
-  <p>This subscription includes all of the filters required to verify the following test cases.</p><br>
+  <p>This subscription includes all of the filters required to verify the following test cases.</p>
+  <p>You can add this subscription and then click through to each test case page and check that the page state matches the test case description. Alternatively you could add a test cases filter(s) manually in order to check it in isolation.</p> 
   <a class="site-button" href="/abp-testcase-subscription.txt" target="_blank">View</a>
   <a class="site-button" href="abp:subscribe?location=http%3A%2F%2Ftestpages.adblockplus.org%2Fabp-testcase-subscription.txt&amp;title=ABP%20Testcase%20Subscription"">Subscribe</a>
 </section>

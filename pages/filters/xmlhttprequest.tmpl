@@ -1,4 +1,4 @@
-title = $xmlhttprequest - ABP Test Pages
+title = $xmlhttprequest
 template = testcase
 
 {% set testcase_moreinfo = [
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', makerequest, false);
 <section class="site-panel">
   <h2>$xmlhttprequest</h2>
   <p>Check that usage of the $xmlhttprequest filter option works as expected.</p>
+  <p>With the filter displayed below each test case added to ABP (or with the testcase subscription installed and active), the XMLHTTPRequest  in each test case panel should be blocked but the images should not.</p>
 </section>
 
 <section class="site-panel">
@@ -53,5 +54,5 @@ document.addEventListener('DOMContentLoaded', makerequest, false);
     </div>
   </div>
   <h3>Filters</h3>
-  testpages.adblockplus.org/testcasefiles/xmlhttprequest/$xmlhttprequest
+  <pre>testpages.adblockplus.org/testcasefiles/xmlhttprequest/$xmlhttprequest</pre>
 </section>
