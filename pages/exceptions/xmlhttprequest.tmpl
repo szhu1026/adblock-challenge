@@ -1,16 +1,11 @@
 title = $xmlhttprequest Exception
+template = testcase
 
 {% set testcase_moreinfo = [
   ("Filter Options", "https://adblockplus.org/filters#options"),
 ] %}
 
 <script>
-function pagelog(message) {
-  var log = document.getElementById("testcase-ex-xmlhttprequest");
-  log.innerText = log.innerText + message + "\n";
-  console.log(message);
-}
-
 function aborted(evt) {
   pagelog("XMLHTTPRequest was aborted.");
 }
@@ -46,7 +41,7 @@ document.addEventListener('DOMContentLoaded', makerequest, false);
   <p>The XMLHTTPRequest should not be blocked. The Image should be blocked.</p>
   <div class="testcase-container">
     <div class="testcase-row">
-      <h3>XMLHTTPRequest</h3><div id="testcase-ex-xmlhttprequest"></div>
+      <h3>XMLHTTPRequest</h3><div id="testcase-output"></div>
     </div>
     <div class="testcase-row">
       <h3>Image</h3><img class="testcase-image" src="/testcasefiles/xmlhttprequestexception/image.jpg"/>

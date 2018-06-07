@@ -77,5 +77,12 @@
 
   <? include footer ?>
 
+  <script>
+    function pagelog(message, ) {
+      var log = document.getElementById("testcase-output");
+      log.innerText = log.innerText + message + "\n";
+      console.log(message);
+    }
+  </script>
   </body>
 </html>

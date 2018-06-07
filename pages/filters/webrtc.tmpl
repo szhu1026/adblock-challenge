@@ -10,12 +10,6 @@ template = testcase
 
 // Borrowed from https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 
-function pagelog(message) {
-  var log = document.getElementById("testcase-fo-webrtc");
-  log.innerText = log.innerText + message + "\n";
-  console.log(message);
-}
-
 function handleReceiveMessage(event) {
   pagelog(event.data);
 }
@@ -95,7 +89,7 @@ document.addEventListener('DOMContentLoaded', do_connect, false);
   <h2>Test case</h2>
   <div class="testcase-container">
     <div class="testcase-row">
-      <h3>WebRTC Request</h3><div id="testcase-fo-webrtc"></div>
+      <h3>WebRTC Request</h3><div id="testcase-output"></div>
     </div>
   </div>
   <h3>Filters</h3>

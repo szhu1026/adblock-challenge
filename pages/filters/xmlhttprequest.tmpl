@@ -6,12 +6,6 @@ template = testcase
 ] %}
 
 <script>
-function pagelog(message) {
-  var log = document.getElementById("testcase-fo-xmlhttprequest");
-  log.innerText = log.innerText + message + "\n";
-  console.log(message);
-}
-
 function aborted(evt) {
   pagelog("XMLHTTPRequest was aborted.");
 }
@@ -47,7 +41,7 @@ document.addEventListener('DOMContentLoaded', makerequest, false);
   <p>The XMLHTTPRequest should be blocked. The Image should not be blocked.</p>
   <div class="testcase-container">
     <div class="testcase-row">
-      <h3>XMLHTTPRequest</h3><div id="testcase-fo-xmlhttprequest"></div>
+      <h3>XMLHTTPRequest</h3><div id="testcase-output"></div>
     </div>
     <div class="testcase-row">
       <h3>Image</h3><img class="testcase-image" src="/testcasefiles/xmlhttprequest/image.jpg"/>

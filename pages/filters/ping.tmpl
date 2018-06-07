@@ -7,12 +7,6 @@ template = testcase
 
 
 <script>
-function pagelog(message) {
-  var log = document.getElementById("testcase-fo-ping");
-  log.innerText = log.innerText + message + "\n";
-  console.log(message);
-}
-
 function do_ping() {
   var button = document.getElementById("ping-button");
   button.parentNode.removeChild(button);
@@ -21,12 +15,10 @@ function do_ping() {
   var res = navigator.sendBeacon("/en/filters/ping", "Testdata" );
   pagelog("navigator.sendBeacon() called.");
 
-  if(res) {
-    pagelog("navigator.sendBeacon() returned true.")
-  }
-  else {
-    pagelog("Beacon could not be queued.")
-  }
+  if (res)
+    pagelog("navigator.sendBeacon() returned true.");
+  else
+    pagelog("Beacon could not be queued.");
 
 }
 </script>
@@ -55,6 +47,7 @@ function do_ping() {
     <div class="testcase-row"><h3>Ping</h3>
       <div id="testcase-fo-ping">
         <button id="ping-button" onclick="do_ping()">Send Ping</button>
+        <div id="testcase-output"></div>
       </div>
     </div>
   </div>

@@ -7,12 +7,6 @@ template = testcase
 
 
 <script>
-function pagelog(message) {
-  var log = document.getElementById("testcase-fo-websocket");
-  log.innerText = log.innerText + message + "\n";
-  console.log(message);
-}
-
 function ws_open(evt) {
   pagelog("Connected");
   websocket.send("Test message was echoed back");
@@ -54,7 +48,7 @@ document.addEventListener('DOMContentLoaded', ws_connect, false);
 <section class="site-panel">
   <h2>Test case</h2>
   <div class="testcase-container">
-   <div class="testcase-row"><h3>WebSocket Request</h3><div id="testcase-fo-websocket"></div></div>
+   <div class="testcase-row"><h3>WebSocket Request</h3><div id="testcase-output"></div></div>
   </div>
   <h3>Filters</h3>
   <pre>$websocket,domain=testpages.adblockplus.org</pre>
