@@ -1,4 +1,4 @@
-# testpages.adblockplus web content
+# testpages.adblockplus.org web content
 
 The web content of the testpages.adblockplus.org domain is generated automatically from the files
 in this repository. For more information and usage instructions see
