@@ -180,10 +180,14 @@ h3 { font-size: 1.1rem; }
   vertical-align: top;
   height: 35%;
   padding: .5rem;
-  background-color: red;
  float:right;
  margin-left: .5rem;
   display: table-cell;
+}
+
+img.blocked {
+  padding: .5rem;
+  background-color: red;
 }
 
 .testcase-image {
@@ -221,6 +225,7 @@ h3 { font-size: 1.1rem; }
   margin-top: .5rem;
 }
 
+.testcase-teststylesheet,
 #testcase-scripttarget {
   padding: .5rem;
 }
@@ -276,4 +281,19 @@ h3 { font-size: 1.1rem; }
     width: 75%;
 	max-width: 900px;
   }
+}
+
+.expected .stripes-red,
+.expected .blocked,
+.expected #testcase-output,
+#testcase-output-expected {
+  display: none;
+}
+
+.expected .trap {
+  visibility: hidden;
+}
+
+.expected #testcase-output-expected {
+  display: block;
 }
