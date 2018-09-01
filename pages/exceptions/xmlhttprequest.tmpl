@@ -18,7 +18,7 @@ function makerequest() {
   var req = new XMLHttpRequest();
   req.addEventListener("error", failed);
   req.addEventListener("abort", aborted);
-  req.open("GET", "http://testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/text.txt", true);
+  req.open("GET", "https://testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/text.txt", true);
   req.onload = function(e) {
     if (this.status == 200) {
       pagelog(this.responseText);
@@ -41,10 +41,14 @@ document.addEventListener('DOMContentLoaded', makerequest, false);
   <p>The XMLHTTPRequest should not be blocked. The Image should be blocked.</p>
   <div class="testcase-container">
     <div class="testcase-row">
-      <h3>XMLHTTPRequest</h3><div id="testcase-output"></div>
+      <h3>XMLHTTPRequest</h3>
+      <div id="testcase-output"></div>
+      <div id="testcase-output-expected">
+        Text loaded via XMLHTTPRequest
+      </div>
     </div>
     <div class="testcase-row">
-      <h3>Image</h3><img class="testcase-image" src="/testcasefiles/xmlhttprequestexception/image.jpg"/>
+      <h3>Image</h3><img class="blocked" src="/testcasefiles/xmlhttprequestexception/image.jpg"/>
     </div>
   </div>
   <h3>Filters</h3>
