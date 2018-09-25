@@ -18,7 +18,7 @@ function makerequest() {
   var req = new XMLHttpRequest();
   req.addEventListener("error", failed);
   req.addEventListener("abort", aborted);
-  req.open("GET", "https://testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/text.txt", true);
+  req.open("GET", "{{ site_url }}/testcasefiles/xmlhttprequestexception/text.txt", true);
   req.onload = function(e) {
     if (this.status == 200) {
       pagelog(this.responseText);
@@ -52,6 +52,6 @@ document.addEventListener('DOMContentLoaded', makerequest, false);
     </div>
   </div>
   <h3>Filters</h3>
-  <pre>||testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/*</pre>
-  <pre>@@testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/$xmlhttprequest</pre>
+  <pre>||{{ site_url|strip_proto }}/testcasefiles/xmlhttprequestexception/*</pre>
+  <pre>@@{{ site_url|strip_proto }}/testcasefiles/xmlhttprequestexception/$xmlhttprequest</pre>
 </section>

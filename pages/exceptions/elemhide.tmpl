@@ -20,7 +20,7 @@ template = testcase
       <div class="testcase-content stripes-grey">Content</div>
   </div>
   <h3>Filters</h3>
-  <pre>testpages.adblockplus.org##.testcase-ex-elemhide</pre>
-  <pre>||testpages.adblockplus.org/testcasefiles/elemhide/image.jpg</pre>
-  <pre>@@testpages.adblockplus.org/en/exceptions/elemhide^$elemhide</pre>
+  <pre>{{ site_url|domain }}##.testcase-ex-elemhide</pre>
+  <pre>||{{ site_url|strip_proto }}/testcasefiles/elemhide/image.jpg</pre>
+  <pre>@@{{ site_url|strip_proto }}/en/exceptions/elemhide^$elemhide</pre>
 </section>

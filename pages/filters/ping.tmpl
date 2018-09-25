@@ -38,7 +38,7 @@ function do_ping() {
     </div>
   </div>
   <h3>Filters</h3>
-  <pre>testpages.adblockplus.org/*^$ping</pre>
+  <pre>{{ site_url|strip_proto }}/*^$ping</pre>
 </section>
 
 <section class="site-panel">
@@ -52,5 +52,5 @@ function do_ping() {
     </div>
   </div>
   <h3>Filters</h3>
-  <pre>testpages.adblockplus.org/*^$ping</pre>
+  <pre>{{ site_url|strip_proto }}/*^$ping</pre>
 </section>
