@@ -47,6 +47,9 @@ template=plaintext
 {{ site_url|strip_proto }}/testcasefiles/xmlhttprequest/$xmlhttprequest
 ! filters/ping
 {{ site_url|strip_proto }}/*^$ping
+! filters/match-case
+/testcasefiles/matchcase/*/abc.jpg$match-case
+
 ! filters/websocket
 $websocket,domain={{ site_url|domain }}
 ! filters/webrtc
