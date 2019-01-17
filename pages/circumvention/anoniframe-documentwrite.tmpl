@@ -16,12 +16,26 @@ setTimeout(function()
 }, 0);
 </script>
 
+<style>
+iframe {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+}
+
+.expected iframe {
+  width: 98px;
+  height: 98px;
+  padding: 98px;
+}
+</style>
+
 <section class="site-panel">
 
   <h2>Test case</h2>
   <div class="testcase-container">
     <p>
-      Top frame: [<span class="testcase-circ-anoniframe-docwrite">This text should be hidden</span>]
+      Top frame: [<span class="testcase-circ-anoniframe-docwrite blocked">This text should be hidden</span>]
     </p>
 
     <p>
@@ -32,6 +46,8 @@ setTimeout(function()
       Subframe (document.write): [<iframe id="write"></iframe>]
     </p>
   </div>
+  <h3>Filters</h3>
+  <pre>{{ site_url|domain }}##.testcase-circ-anoniframe-docwrite</pre>
   <h3>Related links</h3>
   <p><a href="https://issues.adblockplus.org/ticket/3185">Issue #3185</a></p>
 </section>
