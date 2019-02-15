@@ -1,0 +1,29 @@
+title = $sitekey Exception
+template = testcase
+
+{% set testcase_moreinfo = [
+  ("Filter Options", "https://adblockplus.org/filters#options")
+] %}
+
+<section class="site-panel">
+  <h2>$sitekey Exception</h2>
+  <p>Check that usage of the $sitekey filter option works as expected.</p>
+  <p>With the first filter below, the image and frame should be blocked. With the second filter below, the image and the frame should be whitelisted.</p>
+</section>
+
+<section class="site-panel">
+  <h2>Test case</h2>
+  <div class="testcase-container">
+    <div class="testcase-row">
+      <h3>On page</h3>
+      <img src="/testcasefiles/sitekey/image.jpg"/>
+    </div>
+    <div class="testcase-row">
+      <h3>In frame</h3>
+      <iframe src="/testcasefiles/sitekey/frame.html"></iframe>
+    </div>
+  </div>
+  <h3>Filters</h3>
+  <pre>||{{ site_url|strip_proto }}/testcasefiles/sitekey/*</pre>
+  <pre>@@$document,sitekey=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANGtTstne7e8MbmDHDiMFkGbcuBgXmiVesGOG3gtYeM1EkrzVhBjGUvKXYE4GLFwqty3v5MuWWbvItUWBTYoVVsCAwEAAQ</pre>
+</section>
