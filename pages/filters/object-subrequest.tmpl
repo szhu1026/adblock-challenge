@@ -2,13 +2,16 @@ title = $object-subrequest
 template = testcase
 
 {% set testcase_moreinfo = [
-  ("Filter Options", "https://adblockplus.org/filters#options"),
+  ("Filter Options", "https://adblockplus.org/filters#options")
 ] %}
 
 <section class="site-panel">
   <h2>$object-subrequest</h2>
   <p>Check that usage of the $object-subrequest filter option works as expected.</p>
-  <p>With the filter displayed below each test case added to ABP (or with the testcase subscription installed and active), the object/swf file and image should not be blocked, but the request from the object/swf file should be.</p>
+  <p>With the filter displayed below the test case added to ABP (or with the testcase subscription installed and active), the object/swf file and its request should be blocked, but the image should not be.</p>
+  <p>In Chrome/Opera: These browsers do not differentiate between object and object subrequests, therefore the filter below will hide the object itself, instead of just blocking the request.</p>
+  <p>In recent Firefox: Firefox will not load the Flash object.</p>
+  <p>In old Firefox: Just the request should be blocked.</p>
 </section>
 
 <section class="site-panel">
@@ -16,7 +19,9 @@ template = testcase
   <div class="testcase-container">
     <div class="testcase-row">
       <h3>Object Subrequest</h3>
-      <object data="/testcasefiles/objectsubrequest/objectsubrequest.swf" type="application/x-shockwave-flash" style="width: 250px; height: 250px;"></object>
+      <object data="/testcasefiles/objectsubrequest/object-subrequest.swf" type="application/x-shockwave-flash" style="width: 250px; height: 250px;">
+        <param name="FlashVars" value="targeturl={{site_url}}/testcasefiles/objectsubrequest/test.txt"/>
+      </object>
     </div>
     <div class="testcase-row">
       <h3>Image</h3>
@@ -24,5 +29,5 @@ template = testcase
     </div>
   </div>
   <h3>Filters</h3>
-  <pre>{{ site_url|strip_proto }}/testcasefiles/objectsubrequest/$object-subrequest</pre>
+  <pre>{{ site_url|strip_proto }}/testcasefiles/objectsubrequest/*$object-subrequest</pre>
 </section>
