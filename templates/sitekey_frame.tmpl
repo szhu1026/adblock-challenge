@@ -1,10 +1,15 @@
-{% extends "frame.tmpl" %}
-
-{% block body %}
-<script type="text/javascript">
-  function frame_url(parent_location)
-  {
-    return parent_location.origin + parent_location.hash.substring(1);
-  }
-</script>
-{% endblock %}
+<!DOCTYPE html>
+<html{% if public_key and signature %} data-adblockkey="{{ public_key + "_" + signature }}"{% endif %}>
+  <head>
+    <title>{{ title }}</title>
+    <style>
+      html, body { margin: 0; height: 100%; }
+      #iframe { display: block; width: 100%; height: 100%; border: none; }
+    </style>
+    {{ head|safe }}
+  </head>
+  <body>
+    <div style="color: #fff; background: red; padding: .5rem; margin-bottom: .5rem;">Target</div>
+    <img src="/testcasefiles/sitekey/image.jpg"/>
+  </body>
+</html>
