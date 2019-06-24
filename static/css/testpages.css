@@ -68,21 +68,25 @@ h3 { font-size: 1.1rem; }
 
 .stripes-grey {
   border: 2px solid #bcbcbc;
+  background-color: #ccc;
   background-image: repeating-linear-gradient(45deg, #ccc, #ccc 10px, #dbdbdb 10px, #dbdbdb 20px);
 }
 
 .stripes-green {
   border: 2px solid #02c219;
+  background-color: #22b522;
   background-image: repeating-linear-gradient(45deg, #22b522, #22b522 10px, #0c0 10px, #0c0 20px);
 }
 
 .stripes-red {
   border: 2px solid #12bd1f;
+  background-color: #f00;
   background-image: repeating-linear-gradient(45deg, #f00, #f00 10px, #c00 10px, #c00 20px);
 }
 
 .stripes-blue {
   border: 2px solid #0079cc;
+  background-color: #2231b5;
   background-image: repeating-linear-gradient(45deg, #2231b5, #2231b5, 10px, #0079cc 10px, #0079cc 20px);;
 }
 
@@ -158,6 +162,7 @@ h3 { font-size: 1.1rem; }
 .target-red {
   color: #fff;
   border: 2px solid #12bd1f;
+  background-color: #f00;
   background-image: repeating-linear-gradient(45deg, #f00, #f00 10px, #c00 10px, #c00 20px);
   padding: .5rem;
 }
@@ -165,6 +170,7 @@ h3 { font-size: 1.1rem; }
 .target-green {
   color: #fff;
   border: 2px solid #02c219;
+  background-color: #22b522;
   background-image: repeating-linear-gradient(45deg, #22b522, #22b522 10px, #0c0 10px, #0c0 20px);
   padding: .5rem;
 }
