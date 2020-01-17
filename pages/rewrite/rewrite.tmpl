@@ -1,0 +1,77 @@
+<section class="site-panel">
+  <h2>Rewrite</h2>
+  <p>Check that the rewrite option redirects requests to internal resources </p>
+</section>
+
+<!-- text -->
+<section class="site-panel">
+  <h2>blank-text</h2>
+  <p>Test case: The text should be blank</p>
+  <div class="testcase-container">
+    <div class="testcase-row"><object class="blocked" data="/testcasefiles/rewrite/text.txt"></object></div>
+  </div>
+  <h3>Filters</h3>
+  <pre>||{{ site_url|strip_proto }}/testcasefiles/rewrite/text.txt$rewrite=abp-resource:blank-text,domain={{ site_url|strip_proto }}</pre>
+</section>
+
+<link rel="stylesheet" href="/testcasefiles/rewrite/stylesheet.css">
+
+<!-- css -->
+<section class="site-panel">
+  <h2>blank-css</h2>
+  <p>Test case: The style sheet should be blank</p>
+  <div class="testcase-container">
+    <div class="testcase-row">
+      <h3>Stylesheet</h3>
+      <div class="testcase-teststylesheet trap"></div>
+    </div>
+  </div>
+    <h3>Filters</h3>
+    <pre>||{{ site_url|strip_proto }}/testcasefiles/rewrite/stylesheet.css$rewrite=abp-resource:blank-css,domain={{ site_url|strip_proto }}</pre>
+</section>
+
+<!-- html -->
+<section class="site-panel">
+  <h2>blank-html</h2>
+  <p>Test case: The html should be blank</p>
+  <div class="testcase-container">
+    <div class="trap">
+      <h3>Framed</h3>
+      <iframe src="/testcasefiles/rewrite/frame.html" style="width: 100%;"></iframe>
+    </div>
+  </div>
+    <h3>Filters</h3>
+    <pre>||{{ site_url|strip_proto }}/testcasefiles/rewrite/frame.html$rewrite=abp-resource:blank-html,domain={{ site_url|strip_proto }}</pre>
+</section>
+
+<!-- mp3 -->
+<!-- not sure if can testable in current framework-->
+
+<!-- gif -->
+<section class="site-panel">
+  <h2>blank-gif</h2>
+  <p>Test case: The gif should be blank</p>
+  <div class="testcase-container">
+    <div class="trap">
+      <h3>Framed</h3>
+      <iframe src="/testcasefiles/rewrite/gif.gif" style="width: 100%;"></iframe>
+    </div>
+  </div>
+    <h3>Filters</h3>
+    <pre>||{{ site_url|strip_proto }}/testcasefiles/rewrite/gif.gif$rewrite=abp-resource:blank-gif,domain={{ site_url|strip_proto }}</pre>
+</section>
+
+<!-- png -->
+<section class="site-panel">
+  <h2>blank-png</h2>
+  <p>Test case: The image should be blank</p>
+  <div class="testcase-container">
+    <div class="testcase-row">
+      <h3>Image</h3><img src="/testcasefiles/rewrite/image.jpg" class="blocked"/>
+    </div>
+  </div>
+    <h3>Filters</h3>
+    <pre>||{{ site_url|strip_proto }}/testcasefiles/rewrite/image.jpg$rewrite=abp-resource:2x2-transparent-png,domain={{ site_url|strip_proto }}</pre>
+    <pre>||{{ site_url|strip_proto }}/testcasefiles/rewrite/image.jpg$rewrite=abp-resource:3x2-transparent-png,domain={{ site_url|strip_proto }}</pre>
+    <pre>||{{ site_url|strip_proto }}/testcasefiles/rewrite/image.jpg$rewrite=abp-resource:32x32-transparent-png,domain={{ site_url|strip_proto }}</pre>
+</section>
